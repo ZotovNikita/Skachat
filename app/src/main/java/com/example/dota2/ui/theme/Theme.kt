@@ -74,11 +74,46 @@ object AppTheme {
             get() = Color(0xFF000000)
     }
 
-    object ButtonColors { }
+    object ButtonColors {
+        val button: Color
+            get() = Color(0xFFF4D144)
+        val text: Color
+            get() = Color(0xFF050B18)
+    }
 
-    object TextColors { }
+    object TextColors {
+        val description: Color
+            get() = Color(0xB2eef2fb)
+    }
 
     object TextStyle {
+        val Bold_12
+            @Composable
+            get() =
+                TextStyle(
+                    fontFamily = FontFamily,
+                    fontWeight = FontWeight.Normal,
+                    fontSize = 12.sp,
+                    lineHeight = 19.sp,
+                    platformStyle = PlatformTextStyle(includeFontPadding = false),
+                    lineHeightStyle = LineHeightStyle(
+                        LineHeightStyle.Alignment.Proportional,
+                        LineHeightStyle.Trim.None
+                    )
+                )
+        val Bold_20
+            @Composable
+            get() =
+                TextStyle(
+                fontFamily = FontFamily,
+                fontWeight = FontWeight.Bold,
+                fontSize = 20.sp,
+                platformStyle = PlatformTextStyle(includeFontPadding = false),
+                lineHeightStyle = LineHeightStyle(
+                    LineHeightStyle.Alignment.Proportional,
+                    LineHeightStyle.Trim.None
+                    )
+                )
         val Bold_48
             @Composable
             get() =

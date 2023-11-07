@@ -32,6 +32,13 @@ fun DotaScreen() {
         item{
             DotaScreenHeader()
         }
+        item {
+            Description("Dota 2 is a multiplayer online battle arena (MOBA) game which has two teams of five players compete to collectively destroy a large structure defended by the opposing team known as the \"Ancient\", whilst defending their own.")
+        }
+        item {
+            InstallButton()
+        }
+
     }
 }
 
