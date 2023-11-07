@@ -87,6 +87,8 @@ object AppTheme {
     }
 
     object TextColors {
+        val dota_name: Color
+            get() = Color(0xFFFFFFFF)
         val description: Color
             get() = Color(0xB2eef2fb)
         val chip: Color
