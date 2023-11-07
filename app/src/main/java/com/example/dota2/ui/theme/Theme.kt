@@ -68,6 +68,11 @@ object AppTheme {
     object BgColors {
         val primary: Color
             get() = Color(0xFF050B18)
+        val secondary: Color
+            get() = Color(0x3D44A9F4)
+    }
+
+    object LogoColors {
         val logo_frame: Color
             get() = Color(0xFF1F2430)
         val logo_box: Color
@@ -84,10 +89,12 @@ object AppTheme {
     object TextColors {
         val description: Color
             get() = Color(0xB2eef2fb)
+        val chip: Color
+            get() = Color(0xFF44A9F4)
     }
 
     object TextStyle {
-        val Bold_12
+        val Normal_12_19
             @Composable
             get() =
                 TextStyle(
@@ -114,6 +121,17 @@ object AppTheme {
                     LineHeightStyle.Trim.None
                     )
                 )
+        val Medium_10_12
+            @Composable get() = TextStyle(
+                fontFamily = FontFamily,
+                fontWeight = FontWeight.Medium,
+                fontSize = 10.sp,
+                lineHeight = 12.sp,
+                platformStyle = PlatformTextStyle(includeFontPadding = false),
+                lineHeightStyle = LineHeightStyle(
+                    LineHeightStyle.Alignment.Proportional, LineHeightStyle.Trim.None
+                ),
+            )
         val Bold_48
             @Composable
             get() =

@@ -6,6 +6,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.Modifier
@@ -17,10 +18,12 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.stringResource
 import com.example.dota2.ui.theme.AppTheme
 
 
@@ -32,8 +35,27 @@ fun DotaScreen() {
         item{
             DotaScreenHeader()
         }
+
         item {
-            Description("Dota 2 is a multiplayer online battle arena (MOBA) game which has two teams of five players compete to collectively destroy a large structure defended by the opposing team known as the \"Ancient\", whilst defending their own.")
+            ScrollableChipsRow(
+                items = listOf("MOBA", "MULTIPLAYER", "STRATEGY"),
+                chipContent = {item -> item},
+                modifier = Modifier.padding(top = 16.dp, bottom = 16.dp),
+                contentPadding = PaddingValues(start = 24.dp, end = 24.dp),
+                chipsPaddindgValues = PaddingValues(horizontal = 10.dp, vertical = 5.dp)
+            )
+            Text(
+                text = stringResource(id = R.string.description),
+                style = AppTheme.TextStyle.Normal_12_19,
+                color = AppTheme.TextColors.description,
+                modifier = Modifier.padding(
+                    start = 24.dp,
+                    end = 24.dp,
+                    top = 14.dp,
+                    bottom = 14.dp
+                )
+            )
+
         }
         item {
             InstallButton()
@@ -87,13 +109,13 @@ private fun DotaLogo(modifier: Modifier = Modifier) {
         modifier = modifier
             .size(88.dp)
             .clip(RoundedCornerShape(12.dp))
-            .background(color = AppTheme.BgColors.logo_frame)
+            .background(color = AppTheme.LogoColors.logo_frame)
     ) {
         Box(
             modifier = modifier
                 .size(84.dp)
                 .clip(RoundedCornerShape(12.dp))
-                .background(color = AppTheme.BgColors.logo_box)
+                .background(color = AppTheme.LogoColors.logo_box)
                 .align(Alignment.Center)
         ) {
             Box(modifier = modifier.align(Alignment.Center)) {
