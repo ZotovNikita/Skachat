@@ -22,13 +22,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
@@ -79,6 +77,31 @@ fun DotaScreen() {
                 ), contentPadding = PaddingValues(start = 24.dp, end = 24.dp)
             )
         }
+        item {
+            Text(
+                text = stringResource(R.string.rating),
+                style = AppTheme.TextStyle.Bold_16,
+                color = AppTheme.TextColors.description,
+                modifier = Modifier.padding(
+                    start = 24.dp,
+                    end = 24.dp,
+                    top = 20.dp,
+                )
+            )
+        }
+        item{
+            RatingReview(
+                rating = 4.9f,
+                downloads = stringResource(id = R.string.downloads),
+                modifier = Modifier
+                    .padding(
+                        start = 24.dp,
+                        end = 24.dp,
+                        top = 12.dp,
+                        bottom = 16.dp
+                    )
+            )
+        }
         itemsIndexed(comments) { index, item ->
             CommentBlock(
                 commentUi = item,
@@ -86,7 +109,7 @@ fun DotaScreen() {
                     .padding(
                         start = 24.dp,
                         end = 24.dp,
-                        top = 16.dp
+                        top = 24.dp
                     )
             )
             if (index < comments.lastIndex) {
@@ -132,22 +155,30 @@ fun DotaScreenHeader(
                 .padding(start = 24.dp, top = 294.dp)
                 .width(180.dp),
         ) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
+            Row(verticalAlignment = Alignment.Bottom) {
                 DotaLogo(modifier = Modifier)
-                Column {
+                Column(modifier = Modifier.padding(bottom = 8.dp)){
                     Text(
                         text = stringResource(id = R.string.dota2),
                         style = AppTheme.TextStyle.Bold_20,
                         color = AppTheme.TextColors.dota_name,
                         modifier = Modifier.padding(start = 12.dp)
                     )
-                    Rating(
-                        rating = 5.0f,
-                        modifier = Modifier
-                            .padding(start = 12.dp)
-                            .height(14.dp)
-                            .width(90.dp),
-                    )
+                    Row {
+                        Rating(
+                            modifier = Modifier
+                                .padding(start = 12.dp)
+                                .height(14.dp)
+                                .width(90.dp),
+                            rating = 5.0f
+                        )
+                        Text(
+                            text = stringResource(id = R.string.downloads),
+                            style = AppTheme.TextStyle.Normal_12,
+                            color = AppTheme.TextColors.downloads,
+                            modifier = Modifier.padding(start = 10.dp)
+                        )
+                    }
                 }
             }
         }

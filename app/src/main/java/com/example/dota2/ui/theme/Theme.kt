@@ -92,6 +92,8 @@ object AppTheme{
     }
 
     object TextColors {
+        val downloads: Color
+            get() = Color(0xFF45454D)
         val dota_name: Color
             get() = Color(0xFFFFFFFF)
         val description: Color
@@ -113,6 +115,19 @@ object AppTheme{
                     fontFamily = FontFamily,
                     fontWeight = FontWeight.Normal,
                     fontSize = 16.sp,
+                    platformStyle = PlatformTextStyle(includeFontPadding = false),
+                    lineHeightStyle = LineHeightStyle(
+                        LineHeightStyle.Alignment.Proportional,
+                        LineHeightStyle.Trim.None
+                    )
+                )
+        val Normal_12
+            @Composable
+            get() =
+                TextStyle(
+                    fontFamily = FontFamily,
+                    fontWeight = FontWeight.Normal,
+                    fontSize = 12.sp,
                     platformStyle = PlatformTextStyle(includeFontPadding = false),
                     lineHeightStyle = LineHeightStyle(
                         LineHeightStyle.Alignment.Proportional,
@@ -141,6 +156,19 @@ object AppTheme{
                     fontWeight = FontWeight.Normal,
                     fontSize = 12.sp,
                     lineHeight = 20.sp,
+                    platformStyle = PlatformTextStyle(includeFontPadding = false),
+                    lineHeightStyle = LineHeightStyle(
+                        LineHeightStyle.Alignment.Proportional,
+                        LineHeightStyle.Trim.None
+                    )
+                )
+        val Bold_16
+            @Composable
+            get() =
+                TextStyle(
+                    fontFamily = FontFamily,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp,
                     platformStyle = PlatformTextStyle(includeFontPadding = false),
                     lineHeightStyle = LineHeightStyle(
                         LineHeightStyle.Alignment.Proportional,
