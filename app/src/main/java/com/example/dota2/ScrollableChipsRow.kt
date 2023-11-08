@@ -35,6 +35,7 @@ fun ScrollableChipsRow(
     }
 }
 
+
 @Composable
 fun Chip(content: String, paddingValues: PaddingValues, backgroundColor: Color) {
     Box(

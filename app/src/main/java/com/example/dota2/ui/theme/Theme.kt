@@ -93,9 +93,26 @@ object AppTheme {
             get() = Color(0xB2eef2fb)
         val chip: Color
             get() = Color(0xFF44A9F4)
+        val date: Color
+            get() = Color(0x66FFFFFF)
+        val message: Color
+            get() = Color(0xFFA8ADB7)
+
     }
 
     object TextStyle {
+        val Normal_16
+            @Composable get() =
+                TextStyle(
+                    fontFamily = FontFamily,
+                    fontWeight = FontWeight.Normal,
+                    fontSize = 16.sp,
+                    platformStyle = PlatformTextStyle(includeFontPadding = false),
+                    lineHeightStyle = LineHeightStyle(
+                        LineHeightStyle.Alignment.Proportional,
+                        LineHeightStyle.Trim.None
+                    )
+            )
         val Normal_12_19
             @Composable
             get() =
@@ -110,29 +127,46 @@ object AppTheme {
                         LineHeightStyle.Trim.None
                     )
                 )
+        val Normal_12_20
+            @Composable
+            get() =
+                TextStyle(
+                    fontFamily = FontFamily,
+                    fontWeight = FontWeight.Normal,
+                    fontSize = 12.sp,
+                    lineHeight = 20.sp,
+                    platformStyle = PlatformTextStyle(includeFontPadding = false),
+                    lineHeightStyle = LineHeightStyle(
+                        LineHeightStyle.Alignment.Proportional,
+                        LineHeightStyle.Trim.None
+                    )
+                )
         val Bold_20
             @Composable
             get() =
                 TextStyle(
-                fontFamily = FontFamily,
-                fontWeight = FontWeight.Bold,
-                fontSize = 20.sp,
-                platformStyle = PlatformTextStyle(includeFontPadding = false),
-                lineHeightStyle = LineHeightStyle(
-                    LineHeightStyle.Alignment.Proportional,
-                    LineHeightStyle.Trim.None
-                    )
+                    fontFamily = FontFamily,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 20.sp,
+                    platformStyle = PlatformTextStyle(includeFontPadding = false),
+                    lineHeightStyle = LineHeightStyle(
+                        LineHeightStyle.Alignment.Proportional,
+                        LineHeightStyle.Trim.None
+                        )
                 )
         val Medium_10_12
-            @Composable get() = TextStyle(
-                fontFamily = FontFamily,
-                fontWeight = FontWeight.Medium,
-                fontSize = 10.sp,
-                lineHeight = 12.sp,
-                platformStyle = PlatformTextStyle(includeFontPadding = false),
-                lineHeightStyle = LineHeightStyle(
-                    LineHeightStyle.Alignment.Proportional, LineHeightStyle.Trim.None
-                ),
+            @Composable
+            get() =
+                TextStyle(
+                    fontFamily = FontFamily,
+                    fontWeight = FontWeight.Medium,
+                    fontSize = 10.sp,
+                    lineHeight = 12.sp,
+                    platformStyle = PlatformTextStyle(includeFontPadding = false),
+                    lineHeightStyle = LineHeightStyle(
+                        LineHeightStyle.Alignment.Proportional,
+                        LineHeightStyle.Trim.None
+                    )
             )
         val Bold_48
             @Composable
