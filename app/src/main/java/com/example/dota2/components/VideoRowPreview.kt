@@ -1,4 +1,4 @@
-package com.example.dota2
+package com.example.dota2.components
 
 import android.widget.Toast
 import androidx.compose.foundation.Image
@@ -21,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.Alignment
+import com.example.dota2.R
 
 import com.example.dota2.ui.theme.AppTheme
 
@@ -30,7 +31,6 @@ fun VideoPreviewRow(
     previewResList: List<Int>,
     contentPadding: PaddingValues,
     onClick: () -> Unit) {
-
 
     LazyRow(
         contentPadding = contentPadding,

@@ -1,4 +1,4 @@
-package com.example.dota2.ui.theme
+package com.example.dota2.ui
 
 import com.example.dota2.R
 

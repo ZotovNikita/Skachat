@@ -1,4 +1,4 @@
-package com.example.dota2
+package com.example.dota2.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -18,8 +18,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.dota2.ui.theme.AppTheme
-import com.example.dota2.ui.theme.CommentUi
-import com.example.dota2.ui.theme.comments
+import com.example.dota2.ui.CommentUi
+import com.example.dota2.ui.comments
 
 
 @Composable
@@ -47,7 +47,7 @@ fun CommentBlock(
                 Text(
                     text = commentUi.user.name,
                     style = AppTheme.TextStyle.Normal_16,
-                    color = AppTheme.TextColors.dota_name,
+                    color = AppTheme.TextColors.secondary,
                 )
                 Text(
                     text = commentUi.date,

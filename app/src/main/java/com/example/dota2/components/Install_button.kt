@@ -1,4 +1,4 @@
-package com.example.dota2
+package com.example.dota2.components
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -15,6 +15,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.dota2.R
 import com.example.dota2.ui.theme.AppTheme
 
 

@@ -96,7 +96,7 @@ object AppTheme{
     object TextColors {
         val downloads: Color
             get() = Color(0xFF45454D)
-        val dota_name: Color
+        val secondary: Color
             get() = Color(0xFFFFFFFF)
         val primary: Color
             get() = Color(0xB2eef2fb)
