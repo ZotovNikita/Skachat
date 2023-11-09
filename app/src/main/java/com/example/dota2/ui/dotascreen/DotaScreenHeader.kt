@@ -36,7 +36,7 @@ fun DotaScreenHeader(
     ) {
         Box(
             modifier = Modifier
-                .padding(start = 24.dp, top = 290.dp)
+                .padding(start = 24.dp, top = 304.dp)
         ) {
             Row(verticalAlignment = Alignment.Bottom) {
                 DotaLogo(modifier = Modifier)
@@ -81,8 +81,9 @@ private fun HeaderBackground(
             contentDescription = "Header background",
             modifier = Modifier
                 .fillMaxWidth()
-                .height(354.dp),
+                .height(324.dp),
             contentScale = ContentScale.Crop,
+            alignment = Alignment.TopCenter
         )
         content()
     }

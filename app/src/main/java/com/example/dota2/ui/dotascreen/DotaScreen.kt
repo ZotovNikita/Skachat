@@ -92,7 +92,7 @@ fun DotaScreen() {
                     .padding(
                         start = 24.dp,
                         top = 12.dp,
-                        bottom = 32.dp
+                        bottom = 18.dp
                     )
             )
         }
@@ -101,16 +101,22 @@ fun DotaScreen() {
                 commentUi = item,
                 modifier = Modifier
                     .padding(
+                        top = 14.dp,
                         start = 24.dp,
                         end = 24.dp,
-                        bottom = 24.dp
+                        bottom = 12.dp
                     )
             )
             if (index < comments.lastIndex) {
                 Divider(
                     color = AppTheme.BgColors.divider,
                     thickness = 1.dp,
-                    modifier = Modifier.padding(top = 12.dp, bottom = 18.dp)
+                    modifier = Modifier
+                        .padding(
+                            start = 38.dp,
+                            end = 38.dp,
+                            top = 12.dp,
+                            bottom = 12.dp)
                 )
             }
         }
@@ -125,8 +131,8 @@ fun DotaScreen() {
                     .padding(
                         start = 24.dp,
                         end = 24.dp,
-                        top = 16.dp,
-                        bottom = 38.dp
+                        top = 28.dp,
+                        bottom = 40.dp
                     )
             )
         }

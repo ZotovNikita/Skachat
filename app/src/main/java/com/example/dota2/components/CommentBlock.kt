@@ -60,7 +60,7 @@ fun CommentBlock(
             text = "\"${commentUi.message}\"",
             style = AppTheme.TextStyle.Normal_12_20,
             color = AppTheme.TextColors.message,
-            modifier = Modifier.padding(top = 16.dp, bottom = 12.dp)
+            modifier = Modifier.padding(top = 16.dp)
         )
     }
 }
