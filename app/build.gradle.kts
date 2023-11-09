@@ -51,4 +51,7 @@ dependencies {
     implementation(libs.composeMaterial)
     implementation(libs.composeMaterial3)
     implementation(libs.accomponistSystemUiController)
+    implementation(libs.jUnit)
+    implementation(libs.jUnitTest)
+    implementation(libs.jUnitUi)
 }
