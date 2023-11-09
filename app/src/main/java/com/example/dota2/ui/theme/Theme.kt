@@ -89,6 +89,8 @@ object AppTheme{
             get() = Color(0xFFF4D144)
         val text: Color
             get() = Color(0xFF050B18)
+        val play_button: Color
+            get() = Color(0x3DFFFFFF)
     }
 
     object TextColors {

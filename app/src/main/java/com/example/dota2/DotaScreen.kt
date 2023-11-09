@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Text
@@ -38,11 +39,13 @@ import com.example.dota2.ui.theme.comments
 fun DotaScreen() {
 
     val context = LocalContext.current
-//    val LazyListState = rememberLazyListState()
+    val LazyListState = rememberLazyListState()
 
 
     LazyColumn(
-        modifier = Modifier.fillMaxSize()
+        state = LazyListState,
+        modifier = Modifier
+            .fillMaxSize()
     ) {
         item {
             DotaScreenHeader()
@@ -52,8 +55,8 @@ fun DotaScreen() {
             ScrollableChipsRow(
                 items = listOf("MOBA", "MULTIPLAYER", "STRATEGY"),
                 chipContent = { item -> item },
-                modifier = Modifier.padding(top = 16.dp, bottom = 16.dp),
-                contentPadding = PaddingValues(start = 24.dp, end = 24.dp),
+                modifier = Modifier.padding(top = 16.dp, bottom = 30.dp),
+                contentPadding = PaddingValues(start = 24.dp),
                 chipsPaddindgValues = PaddingValues(horizontal = 10.dp, vertical = 5.dp)
             )
             Text(
@@ -61,10 +64,9 @@ fun DotaScreen() {
                 style = AppTheme.TextStyle.Normal_12_19,
                 color = AppTheme.TextColors.description,
                 modifier = Modifier.padding(
-                    start = 24.dp,
-                    end = 24.dp,
-                    top = 14.dp,
-                    bottom = 14.dp
+                    start = 21.dp,
+                    end = 27.dp,
+                    bottom = 15.dp
                 )
             )
 
@@ -74,7 +76,11 @@ fun DotaScreen() {
                 previewResList = listOf(
                     R.drawable.scene1,
                     R.drawable.scene2,
-                ), contentPadding = PaddingValues(start = 24.dp, end = 24.dp)
+                ),
+                contentPadding = PaddingValues(start = 24.dp, end = 24.dp),
+                onClick = {
+                    Toast.makeText(context, "CLICKED", Toast.LENGTH_LONG).show()
+                }
             )
         }
         item {
@@ -83,9 +89,7 @@ fun DotaScreen() {
                 style = AppTheme.TextStyle.Bold_16,
                 color = AppTheme.TextColors.description,
                 modifier = Modifier.padding(
-                    start = 24.dp,
-                    end = 24.dp,
-                    top = 20.dp,
+                    start = 24.dp
                 )
             )
         }
@@ -96,9 +100,8 @@ fun DotaScreen() {
                 modifier = Modifier
                     .padding(
                         start = 24.dp,
-                        end = 24.dp,
                         top = 12.dp,
-                        bottom = 16.dp
+                        bottom = 32.dp
                     )
             )
         }
@@ -109,7 +112,7 @@ fun DotaScreen() {
                     .padding(
                         start = 24.dp,
                         end = 24.dp,
-                        top = 24.dp
+                        bottom = 24.dp
                     )
             )
             if (index < comments.lastIndex) {
@@ -131,8 +134,8 @@ fun DotaScreen() {
                     .padding(
                         start = 24.dp,
                         end = 24.dp,
-                        top = 20.dp,
-                        bottom = 40.dp
+                        top = 16.dp,
+                        bottom = 38.dp
                     )
             )
         }
@@ -152,8 +155,7 @@ fun DotaScreenHeader(
     ) {
         Box(
             modifier = Modifier
-                .padding(start = 24.dp, top = 294.dp)
-                .width(180.dp),
+                .padding(start = 24.dp, top = 290.dp)
         ) {
             Row(verticalAlignment = Alignment.Bottom) {
                 DotaLogo(modifier = Modifier)
@@ -164,7 +166,7 @@ fun DotaScreenHeader(
                         color = AppTheme.TextColors.dota_name,
                         modifier = Modifier.padding(start = 12.dp)
                     )
-                    Row {
+                    Row (modifier = Modifier.padding(top = 7.dp)){
                         Rating(
                             modifier = Modifier
                                 .padding(start = 12.dp)
