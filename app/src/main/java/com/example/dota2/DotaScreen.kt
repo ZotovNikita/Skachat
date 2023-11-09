@@ -62,7 +62,7 @@ fun DotaScreen() {
             Text(
                 text = stringResource(id = R.string.description),
                 style = AppTheme.TextStyle.Normal_12_19,
-                color = AppTheme.TextColors.description,
+                color = AppTheme.TextColors.primary,
                 modifier = Modifier.padding(
                     start = 21.dp,
                     end = 27.dp,
@@ -87,9 +87,10 @@ fun DotaScreen() {
             Text(
                 text = stringResource(R.string.rating),
                 style = AppTheme.TextStyle.Bold_16,
-                color = AppTheme.TextColors.description,
+                color = AppTheme.TextColors.primary,
                 modifier = Modifier.padding(
-                    start = 24.dp
+                    start = 24.dp,
+                    top = 20.dp
                 )
             )
         }

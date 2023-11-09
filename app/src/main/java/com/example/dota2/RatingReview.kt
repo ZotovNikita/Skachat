@@ -21,7 +21,7 @@ fun RatingReview(
         Text(
             text = rating.toString(),
             style = AppTheme.TextStyle.Bold_48,
-            color = AppTheme.TextColors.description,
+            color = AppTheme.TextColors.primary,
         )
         Column(
             modifier = Modifier.padding(

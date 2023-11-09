@@ -98,7 +98,7 @@ object AppTheme{
             get() = Color(0xFF45454D)
         val dota_name: Color
             get() = Color(0xFFFFFFFF)
-        val description: Color
+        val primary: Color
             get() = Color(0xB2eef2fb)
         val chip: Color
             get() = Color(0xFF44A9F4)
