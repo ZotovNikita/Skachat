@@ -1,0 +1,7 @@
+<resources>
+    <string name="dota2">DoTA 2</string>
+    <string name="description">Dota 2 is a multiplayer online battle arena (MOBA) game which has two teams of five players compete to collectively destroy a large structure defended by the opposing team known as the \"Ancient\", whilst defending their own.</string>
+    <string name="button">Install</string>
+    <string name="rating">Review &amp; Ratings</string>
+    <string name="downloads">70M</string>
+</resources>
